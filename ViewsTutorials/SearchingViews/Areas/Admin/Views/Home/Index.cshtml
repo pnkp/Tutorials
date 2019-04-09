@@ -1,0 +1,27 @@
+@model IEnumerable<Client>
+@{ Layout = null;}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Obszar administratora</title>
+</head>
+<body>
+Obszar administratora.
+Klienci:
+<table>
+  <tr>
+    <th>Id klienta</th>
+    <th>Nazwa klienta</th>
+  </tr>
+  @foreach (var client in Model)
+  {
+    <tr>
+      <th>@client.ClientId</th>
+      <th>@client.ClientName</th>
+    </tr>
+  }
+</table>
+</body>
+</html>

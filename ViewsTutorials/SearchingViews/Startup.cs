@@ -27,6 +27,11 @@ namespace ViewsProject
             app.UseMvc(options =>
             {
                 options.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}"
+                );
+                
+                options.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}"
                 );
